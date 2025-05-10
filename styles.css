@@ -507,7 +507,7 @@
   }
   
   .partners p {
-    color: var(--accent-color);
+    color: rgb(235, 35, 35);
     margin-bottom: 3rem;
   } 
   
@@ -607,7 +607,7 @@
 }
 
 .banner-content p {
-  color: #fc9a9a;
+  color: #fff;
   font-size: 1.3rem;
   margin: .8rem 0 10rem;
   padding-top: 0;
