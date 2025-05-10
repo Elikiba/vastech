@@ -219,7 +219,7 @@
   /* HERO SECTION */
   /* ================ */
   .hero {
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('Images/hero.webp');
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('Images/hero.webp');
     height: 100vh;
     min-height: 600px;
     background-size: cover;
@@ -991,6 +991,7 @@
     }
   
     .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Images/hero.webp');
       margin-top: 55px;
       height: 500px;
     }
