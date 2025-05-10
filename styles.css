@@ -600,7 +600,7 @@
 
 .banner-content h2 {
   color: white;
-  font-size: 2.7rem;
+  font-size: 3.3rem;
   margin: 1rem 0;
   text-shadow: 0 2px 10px rgba(0,0,0,0.5);
   line-height: 1.1;
@@ -608,7 +608,7 @@
 
 .banner-content p {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   margin: .8rem 0 10rem;
   padding-top: 0;
   padding-bottom: 7rem;
@@ -1039,7 +1039,7 @@
   /* ================ */
   @media (max-width: 992px) {
   .banner-container {
-    height: 80vh;
+    height: 70vh;
     min-height: 400px;
   }
   
@@ -1049,7 +1049,7 @@
   
   .banner-content h2 {
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 3rem;
   }
   
   .banner-content p {
@@ -1120,7 +1120,7 @@
     }
   
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
   
     .hero p {
@@ -1174,12 +1174,12 @@
   }
   
   .banner-content h2 {
-    font-size: 2rem;
+    font-size: 3px;
   }
   
   .banner-content p {
     font-size: 1rem;
-    margin-bottom: 6rem;
+    margin-bottom: 7px;
   }
   
   .banner-button {
@@ -1188,7 +1188,7 @@
   }
 
   .banner-button-container {
-  margin-top: 8rem;
+  margin-top: 9rem;
 }
 
     .footer-grid {
@@ -1210,7 +1210,7 @@
 
     @media (max-width: 576px) {
    .banner-container {
-    height: 70vh;
+    height: 60vh;
     min-height: 350px;
   }
   
