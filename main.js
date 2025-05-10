@@ -28,10 +28,29 @@ const elements = {
           item.classList.toggle('active');
         });
       });
-    },
+
+       // Close menu when clicking anywhere outside
+    document.addEventListener('click', (e) => {
+      const isMenuButton = e.target === elements.mobileMenuBtn || elements.mobileMenuBtn.contains(e.target);
+      const isInsideMenu = elements.navMenu.contains(e.target);
+      
+      if (!isMenuButton && !isInsideMenu && elements.navMenu.classList.contains('active')) {
+        mobileMenu.toggleMenu();
+      }
+    });
+  },
   
     toggleMenu: () => {
       elements.navMenu.classList.toggle('active');
+       // Toggle hamburger icon
+    const icon = elements.mobileMenuBtn.querySelector('i');
+    if (elements.navMenu.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
     }
   };
   
@@ -212,27 +231,29 @@ const elements = {
         window.removeEventListener('scroll', statsAnimation.checkScroll);
       }
     },
-  
-    startCounting: () => {
-      elements.statNumbers.forEach(stat => {
-        const target = +stat.getAttribute('data-target');
-        const isDecimal = target % 1 !== 0;
-        const increment = target / 200; // Lower is faster
-        let current = 0;
-  
-        const updateNumber = () => {
-          current += increment;
-          if (current < target) {
-            stat.textContent = isDecimal 
-              ? current.toFixed(1) 
-              : Math.floor(current);
-            requestAnimationFrame(updateNumber);
-          } else {
-            stat.textContent = isDecimal 
-              ? target.toFixed(1) + (target === 99.9 ? '%' : '') 
-              : target + (target === 50 ? 'M+' : '+');
-          }
-        };
+
+    
+  startCounting: () => {
+    elements.statNumbers.forEach(stat => {
+      const target = +stat.getAttribute('data-target');
+      const suffix = stat.textContent.match(/[^0-9.]+$/) ? stat.textContent.match(/[^0-9.]+$/)[0] : '';
+      const isDecimal = target % 1 !== 0;
+      const increment = target / 100; // Adjust speed as needed
+      let current = 0;
+
+      const updateNumber = () => {
+        current += increment;
+        if (current < target) {
+          stat.textContent = isDecimal 
+            ? current.toFixed(1) + suffix
+            : Math.floor(current) + suffix;
+          requestAnimationFrame(updateNumber);
+        } else {
+          stat.textContent = isDecimal 
+            ? target.toFixed(1) + suffix
+            : target + suffix;
+        }
+      };
   
         updateNumber();
       });
