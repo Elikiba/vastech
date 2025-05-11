@@ -7,6 +7,8 @@ const elements = {
     menuItems: document.querySelectorAll('.nav-menu > li'),
     topBar: document.querySelector('.top-bar'),
     currentYear: document.getElementById('currentYear'),
+        initPreloader,
+
     newsletterModal: document.getElementById('newsletterModal'),
     newsletterForm: document.querySelector('.newsletter-form'),
     closeNewsletter: document.querySelector('.close-newsletter'),
@@ -124,6 +126,35 @@ const elements = {
       });
     }
   };
+
+  
+//    // ======================
+//   //    PRELOADER
+//   // ======================
+// function initPreloader() {
+//     const preloader = document.querySelector('.preloader');
+//     if (!preloader) return;
+    
+//     document.body.style.overflow = 'hidden';
+    
+//     window.addEventListener('load', function() {
+//         setTimeout(() => {
+//             preloader.style.opacity = '0';
+//             preloader.style.visibility = 'hidden';
+//             document.body.style.overflow = '';
+            
+//             setTimeout(() => preloader.remove(), 1000);
+//         }, 500);
+//     });
+    
+//     // Fallback
+//     setTimeout(() => {
+//         preloader.style.opacity = '0';
+//         preloader.style.visibility = 'hidden';
+//         document.body.style.overflow = '';
+//         setTimeout(() => preloader.remove(), 1000);
+//     }, 4000);
+// }
   
   // ======================
   // NEWSLETTER MODAL
@@ -320,6 +351,7 @@ const elements = {
     topBarScroll.init();
     copyright.init();
     scrollEffects.init();
+    // initPreloader,
     newsletter.init();
     statsAnimation.init();
   });

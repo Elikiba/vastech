@@ -546,17 +546,45 @@
   }
 
 
+  /* Preloader */
+/* .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #05C7C2 80%, var(--accent-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.8s var(--ease-out), visibility 0.8s var(--ease-out);
+}
+
+.preloader-logo {
+    font-family: 'Marcellus', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(90deg, #088A85, #faedce, var(--accent-color));
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shine 2s linear infinite;
+} */
+
+
   /* Brand Banner */
 .brand-banner {
   position: relative;
-  margin: 4rem 0 0;
+  margin: 3.5rem 0 0;
   overflow: hidden;
 }
 
 .banner-container {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   min-height: 500px;
   max-height: 800px;
 }
@@ -578,7 +606,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 8%;
+  padding-top: 7%;
   background: linear-gradient(
     to bottom, 
     rgba(8, 138, 133, 0.6) 0%, 
@@ -600,16 +628,17 @@
 
 .banner-content h2 {
   color: white;
-  font-size: 3.3rem;
-  margin: 1rem 0;
+  font-size: 3.2rem;
+  padding: 0 0;
+  margin: .8rem 0;
   text-shadow: 0 2px 10px rgba(0,0,0,0.5);
   line-height: 1.1;
 }
 
 .banner-content p {
   color: #fff;
-  font-size: 1.6rem;
-  margin: .8rem 0 10rem;
+  font-size: 1.5rem;
+  margin: .5rem 0 6rem;
   padding-top: 0;
   padding-bottom: 7rem;
   text-shadow: 0 1px 5px rgba(0,0,0,0.3);
@@ -1120,7 +1149,7 @@
     }
   
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
   
     .hero p {
@@ -1174,7 +1203,7 @@
   }
   
   .banner-content h2 {
-    font-size: 3px;
+    font-size: 2.5rem;
   }
   
   .banner-content p {
@@ -1210,7 +1239,7 @@
 
     @media (max-width: 576px) {
    .banner-container {
-    height: 60vh;
+    height: 50vh;
     min-height: 350px;
   }
   
@@ -1223,8 +1252,8 @@
   }
 
   .banner-content p {
-    font-size: 1rem;
-    margin-bottom: 4rem;
+    font-size: .8rem;
+    margin-bottom: 2rem;
   }
   
   .banner-content {
