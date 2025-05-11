@@ -7,8 +7,6 @@ const elements = {
     menuItems: document.querySelectorAll('.nav-menu > li'),
     topBar: document.querySelector('.top-bar'),
     currentYear: document.getElementById('currentYear'),
-        initPreloader,
-
     newsletterModal: document.getElementById('newsletterModal'),
     newsletterForm: document.querySelector('.newsletter-form'),
     closeNewsletter: document.querySelector('.close-newsletter'),
@@ -129,7 +127,7 @@ const elements = {
 
   
 //    // ======================
-//   //    PRELOADER
+//   // PRELOADER
 //   // ======================
 // function initPreloader() {
 //     const preloader = document.querySelector('.preloader');
@@ -351,7 +349,6 @@ const elements = {
     topBarScroll.init();
     copyright.init();
     scrollEffects.init();
-    // initPreloader,
     newsletter.init();
     statsAnimation.init();
   });
